@@ -19,7 +19,7 @@ export const projects: Project[] = [
       "ToyScan là dự án em tham gia xây dựng nhằm hỗ trợ quản lý dữ liệu sản phẩm và tối ưu trải nghiệm theo dõi thông tin đồ chơi. Em tập trung vào phần phát triển tính năng, tích hợp giao diện và xử lý luồng dữ liệu trong ứng dụng.",
     tech: ["TypeScript", "React", "Next.JS", "GitHub"],
     status: "Hoàn thành",
-    githubUrl: "https://github.com/PhanNgocVy2212499/ToyScan",
+    githubUrl: "https://github.com/PhamThanhBinh268/ToyScan",
   },
   {
     id: "aea-mobileapp",
@@ -39,7 +39,7 @@ export const projects: Project[] = [
       "Game3D_SaveOulSoul là đồ án game 3D kinh dị nơi người chơi phải tìm đường sinh tồn qua các màn chơi có yếu tố hù dọa, khám phá và giải đố. Em tham gia xây dựng ý tưởng gameplay, tinh chỉnh trải nghiệm và tổ chức mã nguồn dự án.",
     tech: ["Unity", "C#", "3D Game", "Game Design"],
     status: "Hoàn thành",
-    githubUrl: "https://github.com/PhanNgocVyMSSV2212499/Game3D_SaveOulSoul",
+    githubUrl: "https://github.com/PhamThanhBinh268/Game3D_SaveOulSoul",
   },
 ];
 

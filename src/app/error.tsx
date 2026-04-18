@@ -1,33 +1,38 @@
 "use client";
 
-export default function GlobalError({
+import { useEffect } from "react";
+
+export default function Error({
   error,
   reset,
 }: {
   error: Error & { digest?: string };
   reset: () => void;
 }) {
+  useEffect(() => {
+    console.error(error);
+  }, [error]);
+
   return (
-    <html>
-      <body>
-        <div className="min-h-screen flex items-center justify-center bg-gray-50 dark:bg-gray-950">
-          <div className="max-w-md w-full p-8 text-center bg-white dark:bg-gray-900 shadow-lg rounded-xl border dark:border-gray-800">
-            <div className="text-6xl mb-6">🚨</div>
-            <h2 className="text-2xl font-bold text-red-600 dark:text-red-400 mb-4">
-              Lỗi nghiêm trọng
-            </h2>
-            <p className="text-gray-600 dark:text-gray-400 mb-8">
-              {error.message || "Có vấn đề xảy ra ở mức toàn cục ứng dụng."}
-            </p>
-            <button
-              onClick={() => reset()}
-              className="bg-red-600 hover:bg-red-700 text-white px-6 py-2 rounded-lg transition-colors"
-            >
-              Cố gắng khôi phục
-            </button>
-          </div>
-        </div>
-      </body>
-    </html>
+    <div className="py-24 text-center">
+      <div className="w-20 h-20 bg-red-100 text-red-600 rounded-full flex items-center justify-center mx-auto mb-6 text-3xl">
+        ⚠
+      </div>
+      <h2 className="text-3xl font-bold mb-4">Đã xảy ra lỗi!</h2>
+      <p className="text-gray-600 mb-4 max-w-md mx-auto">
+        Chúng tôi rất tiếc vì sự cố này. Vui lòng thử tải lại trang hoặc bấm nút bên dưới để khôi phục.
+      </p>
+      {error.message && (
+        <p className="text-xs text-red-400 mb-8 max-w-md mx-auto font-mono">
+          {error.message}
+        </p>
+      )}
+      <button
+        onClick={() => reset()}
+        className="bg-gray-900 text-white px-8 py-3 rounded-xl hover:bg-gray-800 transition-colors font-bold"
+      >
+        Thử lại
+      </button>
+    </div>
   );
 }
