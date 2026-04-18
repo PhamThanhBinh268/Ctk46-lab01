@@ -9,6 +9,7 @@ export default function ThemeToggle() {
     // Check initial theme from system or localStorage if implemented
     const root = window.document.documentElement;
     if (root.classList.contains("dark")) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setIsDark(true);
     }
   }, []);

@@ -11,6 +11,7 @@ export default function Navbar() {
             <Link href="/about" className="text-gray-600 hover:text-blue-600 transition-colors">Giới thiệu</Link>
             <Link href="/blog" className="text-gray-600 hover:text-blue-600 transition-colors">Blog</Link>
             <Link href="/projects" className="text-gray-600 hover:text-blue-600 transition-colors">Dự án</Link>
+            <Link href="/guestbook" className="text-gray-600 hover:text-blue-600 transition-colors">Lưu bút</Link>
             <Link href="/contact" className="text-gray-600 hover:text-blue-600 transition-colors">Liên hệ</Link>
           </div>
         </div>
